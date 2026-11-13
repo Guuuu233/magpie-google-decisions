@@ -1,0 +1,22 @@
+{
+  "name": "magpie-google-decisions",
+  "version": "0.1.0",
+  "description": "Gemini Decision 1 for Magpie System One, using Google AI Studio API keys.",
+  "type": "module",
+  "main": "./index.mjs",
+  "files": ["index.mjs", "adapter.mjs", "README.md", "LICENSE"],
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "magpie": {
+    "name": "Google Decisions",
+    "icon": "workflow"
+  },
+  "license": "MIT",
+  "engines": {"node": ">=20"},
+  "keywords": ["magpie", "magpie-plugin", "gemini", "google", "decisions", "system-one"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Guuuu233/magpie-google-decisions.git"
+  }
+}
