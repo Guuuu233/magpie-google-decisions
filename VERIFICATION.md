@@ -9,4 +9,6 @@ Date: 2026-11-13.
 - **Live gateway guardrails:** an unsupported `text` decision type returned HTTP 400; existing `/v1/models` returned HTTP 200; `magpie healthcheck` exited with status 0.
 - **Error-path limits:** 401/429/503 pass-through, network failure, malformed responses, timeouts and cancellation passed in offline synthetic tests. They were **not** deliberately induced in the user's production Google account, avoiding unnecessary failures/quota usage.
 
-Publication gate: **cleared for v0.1.0**: live noul, choice, and score responses have been verified through Magpie; error handling is covered with controlled fixtures. Recheck from a fresh GitHub install before declaring the GitHub distribution verified.
+**GitHub installation check:** after pushing `main`, a clean, isolated Magpie 0.1.4052 home installed `github:Guuuu233/magpie-google-decisions`, resolved the published `0.1.0` package, and registered `google-decisions` / `gemini-decision-1` with `decide: true` and `decides: true`. It intentionally remained signed out and did not access production credentials.
+
+Publication gate: **cleared for v0.1.0**: real noul, choice, and score requests through Magpie succeeded; offline errors, cancellation and timeout fixtures passed; GitHub fresh-install discovery succeeded. Live authenticated calls were tested using the local-path installation; the fresh GitHub installation was a credential-free loading check.
