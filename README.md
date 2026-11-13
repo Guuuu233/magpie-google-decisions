@@ -47,6 +47,6 @@ The reply contains the corresponding typed `answers` with probabilities and conf
 node --test test/*.test.mjs
 ```
 
-Offline tests use synthetic keys and injected fetch implementations. Real end-to-end verification requires a Google AI Studio API key explicitly signed into this provider on a Magpie instance; a 200 response from a mock is not a live verification.
+Offline tests use synthetic keys and injected fetch implementations. On November 13, 2026, the live Magpie 0.1.4052 gateway successfully forwarded authenticated `noul`, `choice`, and `score` requests to Google and returned valid probability distributions. Live 401/429 failures were not deliberately induced; those paths are covered by controlled fixture tests. See [VERIFICATION.md](VERIFICATION.md).
 
 References: [Google Decisions API specification](https://aistudio.google.com/docs/decisions-api), [Magpie plugin authoring](https://usemagpie.ai/docs/plugins), [Magpie community OpenAI Decisions plugin](https://github.com/magpie-community/plugins/tree/main/packages/openai-decisions). Independent MIT-licensed project; not affiliated with Google or Magpie.
